@@ -1,0 +1,94 @@
+@import "tailwindcss"; /* Import Tailwind CSS */
+
+@theme {
+  /* Colors */
+  --color-coffee-50: #FFF8E1;
+  --color-coffee-100: #F5F5DC;
+  --color-coffee-200: #D4A574;
+  --color-coffee-300: #FF8A50;
+  --color-coffee-400: #5D4037;
+  --color-coffee-500: #3C2415;
+
+  /* Font Family */
+  --font-sans: 'Inter', system-ui, 'Avenir', Helvetica, Arial, sans-serif;
+
+  /* Spacing */
+  --spacing-18: 4.5rem;
+  --spacing-88: 22rem;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-coffee-500 hover:bg-coffee-400 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105;
+  }
+  
+  .btn-secondary {
+    @apply bg-coffee-200 hover:bg-coffee-300 text-coffee-500 font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105;
+  }
+  
+  .product-card {
+    @apply bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden;
+  }
+  
+  .testimonial-card {
+    @apply bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-coffee-500 text-center mb-12;
+  }
+  
+  .nav-link {
+    @apply text-white hover:text-coffee-200 transition-colors duration-300 font-medium;
+  }
+  
+
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .bg-overlay {
+    background: linear-gradient(rgba(60, 36, 21, 0.7), rgba(60, 36, 21, 0.7));
+  }
+  
+  .animate-blob {
+    animation: blob 7s infinite;
+  }
+  
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+  
+  @keyframes blob {
+    0% {
+      transform: translate(0px, 0px) scale(1);
+    }
+    33% {
+      transform: translate(30px, -50px) scale(1.1);
+    }
+    66% {
+      transform: translate(-20px, 20px) scale(0.9);
+    }
+    100% {
+      transform: translate(0px, 0px) scale(1);
+    }
+  }
+}
