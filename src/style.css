@@ -11,6 +11,7 @@
 
   /* Font Family */
   --font-sans: 'Inter', system-ui, 'Avenir', Helvetica, Arial, sans-serif;
+  --font-serif: 'Playfair Display', serif;
 
   /* Spacing */
   --spacing-18: 4.5rem;
@@ -50,13 +51,63 @@
   }
   
   .nav-link {
-    @apply text-white hover:text-coffee-200 transition-colors duration-300 font-medium;
+    @apply text-coffee-500 hover:text-white transition-colors duration-300 font-medium;
+  }
+  
+  .nav-link-active {
+    @apply text-white font-semibold;
+  }
+  
+  .navbar-scrolled {
+    @apply bg-coffee-500 backdrop-blur-sm shadow-lg;
+  }
+
+  .our-address {
+    @apply text-coffee-500;
+  }
+
+  .navbar-scrolled .our-address {
+    @apply text-white;
+  }
+  
+  .navbar-scrolled .nav-link {
+    @apply text-white hover:text-coffee-200 font-semibold;
+  }
+  
+  .navbar-scrolled .nav-link-active {
+    @apply text-gray-800;
+  }
+  
+  .navbar-scrolled .text-white {
+    @apply text-gray-800;
+  }
+  
+  .navbar-scrolled .text-gray-200 {
+    @apply text-coffee-400;
+  }
+  
+  .font-serif {
+    font-family: 'Playfair Display', serif;
   }
   
 
 }
 
 @layer utilities {
+  .bg-coffee-pattern::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/assets/images/coffee-pattern.png");
+    background-size: 500px 500px;
+    background-position: center;
+    background-repeat: repeat;
+    opacity: 0.13;
+  }
+
   .text-shadow {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
