@@ -90,6 +90,27 @@
     font-family: 'Playfair Display', serif;
   }
   
+  /* Testimonial Carousel Styles */
+  .testimonial-carousel-container {
+    @apply relative;
+  }
+  
+  .testimonial-swiper {
+    @apply overflow-hidden;
+  }
+  
+  .testimonial-swiper .swiper-slide {
+    @apply opacity-0 transition-opacity duration-500;
+  }
+  
+  .testimonial-swiper .swiper-slide-active {
+    @apply opacity-100;
+  }
+  
+  .testimonial-swiper .swiper-slide-prev,
+  .testimonial-swiper .swiper-slide-next {
+    @apply opacity-0;
+  }
 
 }
 

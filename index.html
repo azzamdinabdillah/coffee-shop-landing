@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <link href="./src/style.css" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   </head>
   <body class="bg-coffee-50">
     <div id="app">
@@ -319,7 +321,7 @@
           <div class="max-w-7xl mx-auto">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
             <!-- Left Column - Content -->
-            <div class="text-center lg:text-left">
+            <div class="text-center lg:text-left order-2">
               <!-- Badge -->
               <div class="inline-flex items-center space-x-2 bg-coffee-200 text-coffee-500 px-4 py-2 rounded-full text-sm font-semibold mb-6">
                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -1045,87 +1047,373 @@
       </section>
 
       <!-- Customer Testimonials Section -->
-      <section class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-          <h2 class="section-title">Come and join OUR HAPPY CUSTOMERS</h2>
-          
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <!-- Testimonial 1 -->
-            <div class="testimonial-card text-center">
-              <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Jane Adams" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover">
-              <h4 class="text-xl font-semibold text-coffee-500 mb-2">Jane Adams</h4>
-              <div class="flex justify-center mb-4">
-                <div class="flex space-x-1">
-                  <svg class="w-5 h-5 text-coffee-300 fill-current" viewBox="0 0 24 24">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                  </svg>
-                  <svg class="w-5 h-5 text-coffee-300 fill-current" viewBox="0 0 24 24">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                  </svg>
-                  <svg class="w-5 h-5 text-coffee-300 fill-current" viewBox="0 0 24 24">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                  </svg>
-                  <svg class="w-5 h-5 text-coffee-300 fill-current" viewBox="0 0 24 24">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                  </svg>
-                  <svg class="w-5 h-5 text-coffee-300 fill-current" viewBox="0 0 24 24">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                  </svg>
+      <section class="py-24 bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50 relative overflow-hidden">
+        <!-- Background Pattern -->
+        <!-- <div class="absolute inset-0 bg-coffee-pattern-2 opacity-8"></div> -->
+        
+        <!-- Geometric Shapes -->
+        <div class="absolute top-20 left-10 w-20 h-20 bg-gradient-to-br from-coffee-200/30 to-coffee-300/20 rounded-full blur-xl"></div>
+        <div class="absolute top-40 right-16 w-16 h-16 bg-gradient-to-br from-coffee-300/25 to-coffee-400/15 rounded-full blur-lg"></div>
+        <div class="absolute bottom-32 left-1/3 w-12 h-12 bg-gradient-to-br from-coffee-400/20 to-coffee-500/10 rounded-full blur-md"></div>
+        
+        <!-- Subtle Lines -->
+        <div class="absolute top-1/4 left-0 w-32 h-px bg-gradient-to-r from-transparent via-coffee-200/20 to-transparent"></div>
+        <div class="absolute bottom-1/3 right-0 w-40 h-px bg-gradient-to-l from-transparent via-coffee-300/15 to-transparent"></div>
+        
+        <div class="relative z-10 container mx-auto px-4">
+          <div class="max-w-7xl mx-auto">
+            <!-- <div class="text-center mb-20 max-w-4xl mx-auto">
+              <div class="flex items-center justify-center space-x-2 mb-6">
+                <span class="text-yellow-500 font-semibold text-sm tracking-wider">CUSTOMER TESTIMONIALS</span>
+                <svg class="w-4 h-4 text-yellow-500" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+              </div>
+              <h2 class="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight font-serif">
+                <span class="text-coffee-500">What Our</span>
+                <br class="hidden lg:block">
+                <span class="text-yellow-500">Customers Say</span>
+              </h2>
+              <p class="text-coffee-400 text-lg mb-8 leading-relaxed max-w-2xl mx-auto">
+                Hear from our loyal guests about their favorite moments, flavors, and experiences at our coffee shop. Your satisfaction is our top priority!
+              </p>
+            </div> -->
+            
+            <!-- Testimonial Carousel -->
+            <div class="testimonial-carousel-container">
+              <div class="swiper testimonial-swiper">
+                <div class="swiper-wrapper">
+                  <!-- Testimonial 1 -->
+                  <div class="swiper-slide">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                      <!-- Left Column - Content -->
+                      <div class="text-center lg:text-left order-2">
+                        <!-- Rating Stars -->
+                        <div class="flex justify-center lg:justify-start space-x-1 mb-6">
+                          <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L15.09 8.26L22 9L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9L8.91 8.26L12 2Z"/>
+                          </svg>
+                          <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L15.09 8.26L22 9L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9L8.91 8.26L12 2Z"/>
+                          </svg>
+                          <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L15.09 8.26L22 9L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9L8.91 8.26L12 2Z"/>
+                          </svg>
+                          <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L15.09 8.26L22 9L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9L8.91 8.26L12 2Z"/>
+                          </svg>
+                          <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L15.09 8.26L22 9L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9L8.91 8.26L12 2Z"/>
+                          </svg>
+                        </div>
+                        
+                        <!-- Testimonial Quote -->
+                        <blockquote class="text-3xl md:text-4xl font-bold text-coffee-500 mb-8 leading-tight font-serif">
+                          "This coffee shop transformed my mornings. Perfect espresso, cozy atmosphere, and amazing service every time."
+                        </blockquote>
+                        
+                        <!-- Customer Info -->
+                        <div class="mb-8">
+                          <h4 class="text-xl font-bold text-coffee-500 mb-1">Sarah Johnson</h4>
+                          <p class="text-coffee-400">Coffee Enthusiast at Morning Brew Co.</p>
+                        </div>
+                        
+                        <!-- Navigation Buttons -->
+                        <div class="flex justify-center lg:justify-start space-x-4">
+                          <button class="testimonial-prev-btn w-12 h-12 rounded-full bg-coffee-200 hover:bg-coffee-300 text-coffee-500 flex items-center justify-center transition-all duration-300 transform hover:scale-105">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                            </svg>
+                          </button>
+                          <button class="testimonial-next-btn w-12 h-12 rounded-full bg-coffee-200 hover:bg-coffee-300 text-coffee-500 flex items-center justify-center transition-all duration-300 transform hover:scale-105">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                      
+                      <!-- Right Column - Ultra Modern Customer Card -->
+                      <div class="relative">
+                        <!-- Main Card Container -->
+                        <div class="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-[1.5rem] shadow-[0_0_50px_rgba(139,69,19,0.3)]">
+                          
+                          <!-- Background Pattern -->
+                          <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(139,69,19,0.15),transparent_50%)]"></div>
+                          <div class="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,193,7,0.1),transparent_50%)]"></div>
+                          <div class="absolute inset-0 bg-[conic-gradient(from_0deg_at_50%_50%,rgba(139,69,19,0.1),rgba(255,193,7,0.1),rgba(139,69,19,0.1))] opacity-30"></div>
+                          
+                          <!-- Main Content -->
+                          <div class="relative p-7">
+                            
+                            <!-- Full Image Section with Overlays -->
+                            <div class="relative w-full h-96 rounded-2xl">
+                              <!-- Main Image -->
+                              <img 
+                                src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                                alt="Sarah Johnson" 
+                                class="w-full h-full object-cover"
+                              >
+                              
+                              <!-- Gradient Overlay -->
+                              <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"></div>
+                              
+                              <!-- Pattern Overlay -->
+                              <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(139,69,19,0.3),transparent_40%)]"></div>
+                              
+                              <!-- Floating Elements -->
+                              <div class="absolute top-4 right-4 w-16 h-16 bg-gradient-to-r from-coffee-400/20 to-amber-400/20 backdrop-blur-sm rounded-full border border-white/20 flex items-center justify-center">
+                                <svg class="w-8 h-8 text-white drop-shadow-lg" fill="currentColor" viewBox="0 0 24 24">
+                                  <path d="M12 2L15.09 8.26L22 9L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9L8.91 8.26L12 2Z"/>
+                                </svg>
+                              </div>
+                              
+                              <!-- Decorative Corner Elements -->
+                              <div class="absolute top-0 left-0 w-20 h-20 bg-gradient-to-br from-coffee-400/30 to-transparent rounded-br-full"></div>
+                              <div class="absolute bottom-0 right-0 w-16 h-16 bg-gradient-to-tl from-amber-400/30 to-transparent rounded-tl-full"></div>
+                              
+                              <!-- Customer Info Overlay -->
+                              <div class="absolute bottom-0 left-0 right-0 p-8">
+                                <div class="text-center">
+                                  <h4 class="text-3xl font-bold text-white mb-2 drop-shadow-lg">Sarah Johnson</h4>
+                                  <p class="text-amber-200 font-semibold text-lg mb-1 drop-shadow-lg">Coffee Enthusiast</p>
+                                  <p class="text-slate-300 text-sm drop-shadow-lg">at Morning Brew Co.</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <!-- Decorative Elements -->
+                        <div class="absolute -top-8 -right-8 w-16 h-16 bg-gradient-to-r from-coffee-400/20 to-amber-400/20 rounded-full opacity-30 blur-md"></div>
+                        <div class="absolute -bottom-8 -left-8 w-14 h-14 bg-gradient-to-r from-yellow-400/20 to-coffee-400/20 rounded-full opacity-30 blur-md"></div>
+                        <div class="absolute top-1/2 -left-10 w-8 h-8 bg-coffee-400/40 rounded-full opacity-40"></div>
+                        <div class="absolute top-1/3 -right-6 w-6 h-6 bg-amber-400/40 rounded-full opacity-40"></div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Testimonial 2 -->
+                  <div class="swiper-slide">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                      <!-- Left Column - Content -->
+                      <div class="text-center lg:text-left order-2">
+                        <!-- Rating Stars -->
+                        <div class="flex justify-center lg:justify-start space-x-1 mb-6">
+                          <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L15.09 8.26L22 9L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9L8.91 8.26L12 2Z"/>
+                          </svg>
+                          <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L15.09 8.26L22 9L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9L8.91 8.26L12 2Z"/>
+                          </svg>
+                          <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L15.09 8.26L22 9L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9L8.91 8.26L12 2Z"/>
+                          </svg>
+                          <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L15.09 8.26L22 9L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9L8.91 8.26L12 2Z"/>
+                          </svg>
+                          <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L15.09 8.26L22 9L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9L8.91 8.26L12 2Z"/>
+                          </svg>
+                        </div>
+                        
+                        <!-- Testimonial Quote -->
+                        <blockquote class="text-3xl md:text-4xl font-bold text-coffee-500 mb-8 leading-tight font-serif">
+                          "Outstanding quality and service! The desserts are absolutely divine and pair perfectly with their signature blends."
+                        </blockquote>
+                        
+                        <!-- Customer Info -->
+                        <div class="mb-8">
+                          <h4 class="text-xl font-bold text-coffee-500 mb-1">Michael Chen</h4>
+                          <p class="text-coffee-400">Business Manager at Tech Solutions Inc.</p>
+                        </div>
+                        
+                        <!-- Navigation Buttons -->
+                        <div class="flex justify-center lg:justify-start space-x-4">
+                          <button class="testimonial-prev-btn w-12 h-12 rounded-full bg-coffee-200 hover:bg-coffee-300 text-coffee-500 flex items-center justify-center transition-all duration-300 transform hover:scale-105">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                            </svg>
+                          </button>
+                          <button class="testimonial-next-btn w-12 h-12 rounded-full bg-coffee-200 hover:bg-coffee-300 text-coffee-500 flex items-center justify-center transition-all duration-300 transform hover:scale-105">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                      
+                      <!-- Right Column - Ultra Modern Customer Card -->
+                      <div class="relative">
+                        <!-- Main Card Container -->
+                        <div class="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-[1.5rem] shadow-[0_0_50px_rgba(139,69,19,0.3)]">
+                          
+                          <!-- Background Pattern -->
+                          <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(139,69,19,0.15),transparent_50%)]"></div>
+                          <div class="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,193,7,0.1),transparent_50%)]"></div>
+                          <div class="absolute inset-0 bg-[conic-gradient(from_0deg_at_50%_50%,rgba(139,69,19,0.1),rgba(255,193,7,0.1),rgba(139,69,19,0.1))] opacity-30"></div>
+                          
+                          <!-- Main Content -->
+                          <div class="relative p-7">
+                            
+                            <!-- Full Image Section with Overlays -->
+                            <div class="relative w-full h-96 rounded-2xl">
+                              <!-- Main Image -->
+                              <img 
+                                src="https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                                alt="Michael Chen" 
+                                class="w-full h-full object-cover"
+                              >
+                              
+                              <!-- Gradient Overlay -->
+                              <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"></div>
+                              
+                              <!-- Pattern Overlay -->
+                              <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(139,69,19,0.3),transparent_40%)]"></div>
+                              
+                              <!-- Floating Elements -->
+                              <div class="absolute top-4 right-4 w-16 h-16 bg-gradient-to-r from-coffee-400/20 to-amber-400/20 backdrop-blur-sm rounded-full border border-white/20 flex items-center justify-center">
+                                <svg class="w-8 h-8 text-white drop-shadow-lg" fill="currentColor" viewBox="0 0 24 24">
+                                  <path d="M12 2L15.09 8.26L22 9L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9L8.91 8.26L12 2Z"/>
+                                </svg>
+                              </div>
+                              
+                              <!-- Decorative Corner Elements -->
+                              <div class="absolute top-0 left-0 w-20 h-20 bg-gradient-to-br from-coffee-400/30 to-transparent rounded-br-full"></div>
+                              <div class="absolute bottom-0 right-0 w-16 h-16 bg-gradient-to-tl from-amber-400/30 to-transparent rounded-tl-full"></div>
+                              
+                              <!-- Customer Info Overlay -->
+                              <div class="absolute bottom-0 left-0 right-0 p-8">
+                                <div class="text-center">
+                                  <h4 class="text-3xl font-bold text-white mb-2 drop-shadow-lg">Michael Chen</h4>
+                                  <p class="text-amber-200 font-semibold text-lg mb-1 drop-shadow-lg">Business Manager</p>
+                                  <p class="text-slate-300 text-sm drop-shadow-lg">at Tech Solutions Inc.</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <!-- Decorative Elements -->
+                        <div class="absolute -top-8 -right-8 w-16 h-16 bg-gradient-to-r from-coffee-400/20 to-amber-400/20 rounded-full opacity-30 blur-md"></div>
+                        <div class="absolute -bottom-8 -left-8 w-14 h-14 bg-gradient-to-r from-yellow-400/20 to-coffee-400/20 rounded-full opacity-30 blur-md"></div>
+                        <div class="absolute top-1/2 -left-10 w-8 h-8 bg-coffee-400/40 rounded-full opacity-40"></div>
+                        <div class="absolute top-1/3 -right-6 w-6 h-6 bg-amber-400/40 rounded-full opacity-40"></div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Testimonial 3 -->
+                  <div class="swiper-slide">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center">
+                      <!-- Left Column - Content -->
+                      <div class="text-center lg:text-left order-2">
+                        <!-- Rating Stars -->
+                        <div class="flex justify-center lg:justify-start space-x-1 mb-6">
+                          <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L15.09 8.26L22 9L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9L8.91 8.26L12 2Z"/>
+                          </svg>
+                          <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L15.09 8.26L22 9L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9L8.91 8.26L12 2Z"/>
+                          </svg>
+                          <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L15.09 8.26L22 9L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9L8.91 8.26L12 2Z"/>
+                          </svg>
+                          <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L15.09 8.26L22 9L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9L8.91 8.26L12 2Z"/>
+                          </svg>
+                          <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L15.09 8.26L22 9L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9L8.91 8.26L12 2Z"/>
+                          </svg>
+                        </div>
+                        
+                        <!-- Testimonial Quote -->
+                        <blockquote class="text-3xl md:text-4xl font-bold text-coffee-500 mb-8 leading-tight font-serif">
+                          "A true gem in the city! The artisanal approach to coffee making is evident in every cup. Perfect for work and relaxation."
+                        </blockquote>
+                        
+                        <!-- Customer Info -->
+                        <div class="mb-8">
+                          <h4 class="text-xl font-bold text-coffee-500 mb-1">Emma Rodriguez</h4>
+                          <p class="text-coffee-400">Creative Director at Design Studio</p>
+                        </div>
+                        
+                        <!-- Navigation Buttons -->
+                        <div class="flex justify-center lg:justify-start space-x-4">
+                          <button class="testimonial-prev-btn w-12 h-12 rounded-full bg-coffee-200 hover:bg-coffee-300 text-coffee-500 flex items-center justify-center transition-all duration-300 transform hover:scale-105">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                            </svg>
+                          </button>
+                          <button class="testimonial-next-btn w-12 h-12 rounded-full bg-coffee-200 hover:bg-coffee-300 text-coffee-500 flex items-center justify-center transition-all duration-300 transform hover:scale-105">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                      
+                      <!-- Right Column - Ultra Modern Customer Card -->
+                      <div class="relative">
+                        <!-- Main Card Container -->
+                        <div class="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-[1.5rem] shadow-[0_0_50px_rgba(139,69,19,0.3)]">
+                          
+                          <!-- Background Pattern -->
+                          <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(139,69,19,0.15),transparent_50%)]"></div>
+                          <div class="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,193,7,0.1),transparent_50%)]"></div>
+                          <div class="absolute inset-0 bg-[conic-gradient(from_0deg_at_50%_50%,rgba(139,69,19,0.1),rgba(255,193,7,0.1),rgba(139,69,19,0.1))] opacity-30"></div>
+                          
+                          <!-- Main Content -->
+                          <div class="relative p-7">
+                            
+                            <!-- Full Image Section with Overlays -->
+                            <div class="relative w-full h-96 rounded-2xl">
+                              <!-- Main Image -->
+                              <img 
+                                src="https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                                alt="Emma Rodriguez" 
+                                class="w-full h-full object-cover"
+                              >
+                              
+                              <!-- Gradient Overlay -->
+                              <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"></div>
+                              
+                              <!-- Pattern Overlay -->
+                              <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(139,69,19,0.3),transparent_40%)]"></div>
+                              
+                              <!-- Floating Elements -->
+                              <div class="absolute top-4 right-4 w-16 h-16 bg-gradient-to-r from-coffee-400/20 to-amber-400/20 backdrop-blur-sm rounded-full border border-white/20 flex items-center justify-center">
+                                <svg class="w-8 h-8 text-white drop-shadow-lg" fill="currentColor" viewBox="0 0 24 24">
+                                  <path d="M12 2L15.09 8.26L22 9L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9L8.91 8.26L12 2Z"/>
+                                </svg>
+                              </div>
+                              
+                              <!-- Decorative Corner Elements -->
+                              <div class="absolute top-0 left-0 w-20 h-20 bg-gradient-to-br from-coffee-400/30 to-transparent rounded-br-full"></div>
+                              <div class="absolute bottom-0 right-0 w-16 h-16 bg-gradient-to-tl from-amber-400/30 to-transparent rounded-tl-full"></div>
+                              
+                              <!-- Customer Info Overlay -->
+                              <div class="absolute bottom-0 left-0 right-0 p-8">
+                                <div class="text-center">
+                                  <h4 class="text-3xl font-bold text-white mb-2 drop-shadow-lg">Emma Rodriguez</h4>
+                                  <p class="text-amber-200 font-semibold text-lg mb-1 drop-shadow-lg">Creative Director</p>
+                                  <p class="text-slate-300 text-sm drop-shadow-lg">at Design Studio</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <!-- Decorative Elements -->
+                        <div class="absolute -top-8 -right-8 w-16 h-16 bg-gradient-to-r from-coffee-400/20 to-amber-400/20 rounded-full opacity-30 blur-md"></div>
+                        <div class="absolute -bottom-8 -left-8 w-14 h-14 bg-gradient-to-r from-yellow-400/20 to-coffee-400/20 rounded-full opacity-30 blur-md"></div>
+                        <div class="absolute top-1/2 -left-10 w-8 h-8 bg-coffee-400/40 rounded-full opacity-40"></div>
+                        <div class="absolute top-1/3 -right-6 w-6 h-6 bg-amber-400/40 rounded-full opacity-40"></div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <p class="text-gray-600 italic">"The best coffee I've ever had! The atmosphere is cozy and the staff is incredibly friendly. My morning routine isn't complete without their perfect espresso."</p>
-            </div>
-
-            <!-- Testimonial 2 -->
-            <div class="testimonial-card text-center">
-              <img src="https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Sam Williams" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover">
-              <h4 class="text-xl font-semibold text-coffee-500 mb-2">Sam Williams</h4>
-              <div class="flex justify-center mb-4">
-                <div class="flex space-x-1">
-                  <svg class="w-5 h-5 text-coffee-300 fill-current" viewBox="0 0 24 24">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                  </svg>
-                  <svg class="w-5 h-5 text-coffee-300 fill-current" viewBox="0 0 24 24">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                  </svg>
-                  <svg class="w-5 h-5 text-coffee-300 fill-current" viewBox="0 0 24 24">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                  </svg>
-                  <svg class="w-5 h-5 text-coffee-300 fill-current" viewBox="0 0 24 24">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                  </svg>
-                  <svg class="w-5 h-5 text-coffee-300 fill-current" viewBox="0 0 24 24">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                  </svg>
-                </div>
-              </div>
-              <p class="text-gray-600 italic">"Outstanding quality and service! The desserts are absolutely divine and pair perfectly with their signature blends. I bring all my business meetings here."</p>
-            </div>
-
-            <!-- Testimonial 3 -->
-            <div class="testimonial-card text-center">
-              <img src="https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Angela Gonzales" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover">
-              <h4 class="text-xl font-semibold text-coffee-500 mb-2">Angela Gonzales</h4>
-              <div class="flex justify-center mb-4">
-                <div class="flex space-x-1">
-                  <svg class="w-5 h-5 text-coffee-300 fill-current" viewBox="0 0 24 24">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                  </svg>
-                  <svg class="w-5 h-5 text-coffee-300 fill-current" viewBox="0 0 24 24">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                  </svg>
-                  <svg class="w-5 h-5 text-coffee-300 fill-current" viewBox="0 0 24 24">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                  </svg>
-                  <svg class="w-5 h-5 text-coffee-300 fill-current" viewBox="0 0 24 24">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                  </svg>
-                  <svg class="w-5 h-5 text-coffee-300 fill-current" viewBox="0 0 24 24">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                  </svg>
-                </div>
-              </div>
-              <p class="text-gray-600 italic">"A true gem in the city! The artisanal approach to coffee making is evident in every cup. The ambiance is perfect for both work and relaxation."</p>
             </div>
           </div>
         </div>
@@ -1237,7 +1525,32 @@
       </footer>
     </div>
 
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="/main.js"></script>
     <script src="./src/navbar.js"></script>
+    
+    <!-- Initialize Swiper -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const testimonialSwiper = new Swiper('.testimonial-swiper', {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          loop: true,
+          autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+          },
+          navigation: {
+            nextEl: '.testimonial-next-btn',
+            prevEl: '.testimonial-prev-btn',
+          },
+          effect: 'fade',
+          fadeEffect: {
+            crossFade: true
+          }
+        });
+      });
+    </script>
   </body>
 </html>
