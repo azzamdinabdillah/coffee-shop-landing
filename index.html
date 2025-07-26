@@ -1419,23 +1419,116 @@
         </div>
       </section>
 
-      <!-- Newsletter Subscription Section -->
-      <section class="py-20 bg-cover bg-center relative" style="background-image: url('https://images.pexels.com/photos/2711959/pexels-photo-2711959.jpeg?auto=compress&cs=tinysrgb&w=1920');">
-        <div class="absolute inset-0 bg-coffee-100 bg-opacity-95"></div>
-        <div class="relative z-10 container mx-auto px-4 text-center">
-          <div class="max-w-2xl mx-auto">
-            <h2 class="text-4xl md:text-5xl font-bold text-coffee-500 mb-4">Join in and get 15% Off!</h2>
-            <p class="text-xl text-coffee-400 mb-8">Subscribe to our Newsletter and get 15% off discount code</p>
-            
-            <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input 
-                type="email" 
-                placeholder="Email address" 
-                required
-                class="flex-1 px-6 py-4 rounded-lg border border-coffee-200 focus:outline-none focus:ring-2 focus:ring-coffee-300 focus:border-transparent"
-              >
-              <button type="submit" class="btn-primary whitespace-nowrap">Subscribe</button>
-            </form>
+      <!-- Location & Map Section -->
+      <section class="relative py-24 bg-coffee-500 overflow-hidden">
+        <div class="absolute inset-0 bg-coffee-400 opacity-20"></div>
+        <div class="max-w-6xl mx-auto px-4 relative z-10">
+          <!-- Header Section -->
+          <div class="text-center mb-16">
+            <div class="flex items-center justify-center space-x-2 mb-6">
+              <span class="text-coffee-200 font-semibold text-sm tracking-wider">VISIT US</span>
+              <svg class="w-4 h-4 text-coffee-200" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18.5 3H6c-1.1 0-2 .9-2 2v5.71c0 3.83 2.95 7.18 6.78 7.29 3.96.12 7.22-3.06 7.22-7v-1h.5c1.93 0 3.5-1.57 3.5-3.5S20.43 3 18.5 3zM16 5v3h-2V5h2zM6 5h8v3H6V5z"/>
+              </svg>
+            </div>
+            <h2 class="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight font-serif">
+              <span class="text-white">Find Our</span>
+              <br class="hidden lg:block">
+              <span class="text-coffee-200">Location</span>
+            </h2>
+            <p class="text-coffee-200 text-lg mb-8 leading-relaxed max-w-2xl mx-auto">
+              Experience the finest coffee in a comfortable and strategic location, <span class="font-semibold text-white">in the heart of Jakarta</span>
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <!-- Info Card -->
+            <div class="group relative bg-coffee-400 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 overflow-hidden transform hover:-translate-y-2">
+              <div class="p-10 flex flex-col gap-8">
+                <!-- Address -->
+                <div class="flex items-start gap-5">
+                  <div class="w-14 h-14 flex items-center justify-center rounded-xl bg-coffee-200 shadow-lg">
+                    <svg class="w-7 h-7 text-coffee-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-bold text-white mb-1">Address</h3>
+                    <div class="text-coffee-200 text-base leading-relaxed">
+                      <div class="font-medium">Jl. Sudirman No. 123</div>
+                      <div>Jakarta Pusat, DKI Jakarta 10220</div>
+                      <div>Indonesia</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Hours -->
+                <div class="flex items-start gap-5">
+                  <div class="w-14 h-14 flex items-center justify-center rounded-xl bg-coffee-200 shadow-lg">
+                    <svg class="w-7 h-7 text-coffee-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-bold text-white mb-1">Opening Hours</h3>
+                    <div class="text-coffee-200 text-base leading-relaxed">
+                      <div class="flex justify-between gap-4"><span>Monday - Friday</span><span class="font-semibold text-coffee-100">07:00 - 22:00</span></div>
+                      <div class="flex justify-between gap-4"><span>Saturday - Sunday</span><span class="font-semibold text-coffee-100">08:00 - 23:00</span></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Contact -->
+                <div class="flex items-start gap-5">
+                  <div class="w-14 h-14 flex items-center justify-center rounded-xl bg-coffee-200 shadow-lg">
+                    <svg class="w-7 h-7 text-coffee-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-bold text-white mb-1">Contact</h3>
+                    <div class="text-coffee-200 text-base leading-relaxed space-y-1">
+                      <div class="flex items-center gap-2"><span class="text-coffee-100">📞</span><span>(021) 1234-5678</span></div>
+                      <div class="flex items-center gap-2"><span class="text-coffee-100">✉️</span><span>info@coffeeshop.com</span></div>
+                      <div class="flex items-center gap-2"><span class="text-coffee-100">💬</span><span>+62 812-3456-7890</span></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Facilities -->
+                <div>
+                  <h4 class="text-base font-semibold text-white mb-3">Premium Facilities</h4>
+                  <div class="flex flex-wrap gap-3">
+                    <span class="px-4 py-2 bg-coffee-300/20 text-coffee-200 rounded-full text-sm font-medium border border-coffee-300/30 hover:bg-coffee-300/30 transition-colors duration-300">Free WiFi</span>
+                    <span class="px-4 py-2 bg-coffee-300/20 text-coffee-200 rounded-full text-sm font-medium border border-coffee-300/30 hover:bg-coffee-300/30 transition-colors duration-300">Spacious Parking</span>
+                    <span class="px-4 py-2 bg-coffee-300/20 text-coffee-200 rounded-full text-sm font-medium border border-coffee-300/30 hover:bg-coffee-300/30 transition-colors duration-300">Air Conditioning</span>
+                    <span class="px-4 py-2 bg-coffee-300/20 text-coffee-200 rounded-full text-sm font-medium border border-coffee-300/30 hover:bg-coffee-300/30 transition-colors duration-300">Power Outlets</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Google Maps Embed -->
+            <div class="group relative h-full">
+              <div class="w-full h-full rounded-3xl overflow-hidden shadow-2xl border border-coffee-300/30 relative bg-coffee-400">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.6666666666667!2d106.82222222222222!3d-6.175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5d2e5b5b5b5%3A0x2e69f5d2e5b5b5b5!2sJl.%20Sudirman%2C%20Jakarta%20Pusat%2C%20DKI%20Jakarta!5e0!3m2!1sen!2sid!4v1234567890"
+                  width="100%" 
+                  height="100%" 
+                  style="border:0;" 
+                  allowfullscreen="" 
+                  loading="lazy" 
+                  referrerpolicy="no-referrer-when-downgrade"
+                  class="w-full h-full">
+                </iframe>
+                <a href="https://maps.google.com/?q=Jl.+Sudirman+No.+123,+Jakarta+Pusat,+DKI+Jakarta+10220,+Indonesia" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  class="absolute bottom-6 left-1/2 -translate-x-1/2 bg-coffee-200 text-coffee-500 px-8 py-4 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 font-semibold flex items-center gap-3 text-base">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                  </svg>
+                  <span>Open in Google Maps</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
