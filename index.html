@@ -166,129 +166,239 @@
           
           <!-- Services Grid -->
           <div class="max-w-6xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-16">
               <!-- Hot Coffee -->
-              <div class="group text-center">
+              <div class="group relative bg-gradient-to-br from-coffee-50 via-coffee-100 to-coffee-200/30 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-3 border border-coffee-200/50 overflow-hidden">
+                <!-- Decorative Background Elements -->
+                <div class="absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl from-coffee-300/40 to-transparent rounded-full -translate-y-20 translate-x-20"></div>
+                <div class="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-coffee-400/30 to-transparent rounded-full translate-y-16 -translate-x-16"></div>
+                <div class="absolute top-1/2 left-1/2 w-20 h-20 bg-gradient-to-br from-coffee-200/50 to-transparent rounded-full -translate-x-10 -translate-y-10"></div>
+                
+                <!-- Main Icon with Glow Effect -->
                 <div class="relative mb-8">
-                  <div class="w-20 h-20 mx-auto bg-gradient-to-br from-coffee-400 to-coffee-500 rounded-full flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-500">
-                    <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div class="w-24 h-24 mx-auto bg-gradient-to-br from-coffee-300 via-coffee-400 to-coffee-500 rounded-2xl flex items-center justify-center shadow-2xl group-hover:shadow-coffee-300/50 group-hover:scale-110 transition-all duration-500 relative">
+                    <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
                     </svg>
+                    <!-- Glow Effect -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-coffee-300/50 to-coffee-400/30 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
                   </div>
-                  <div class="absolute -top-2 -right-2 w-6 h-6 bg-coffee-300 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                  
+                  <!-- Floating Elements -->
+                  <div class="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-br from-coffee-300 to-coffee-400 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 animate-pulse"></div>
+                  <div class="absolute -bottom-1 -left-1 w-4 h-4 bg-gradient-to-br from-coffee-200 to-coffee-300 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-700 animate-bounce"></div>
                 </div>
                 
-                <h3 class="text-2xl font-bold text-coffee-500 mb-4 group-hover:text-coffee-400 transition-colors duration-300">
-                  Hot Coffee
-                </h3>
-                <p class="text-coffee-400 mb-6 leading-relaxed text-sm max-w-xs mx-auto">
-                  Rich, aromatic brews served at the perfect temperature for maximum flavor extraction
-                </p>
-                
-                <div class="flex flex-wrap justify-center gap-3">
-                  <span class="px-4 py-2 bg-coffee-50 text-coffee-600 rounded-full text-sm font-medium border border-coffee-200 hover:bg-coffee-100 transition-colors duration-300">
-                    Espresso
-                  </span>
-                  <span class="px-4 py-2 bg-coffee-50 text-coffee-600 rounded-full text-sm font-medium border border-coffee-200 hover:bg-coffee-100 transition-colors duration-300">
-                    Cappuccino
-                  </span>
-                  <span class="px-4 py-2 bg-coffee-50 text-coffee-600 rounded-full text-sm font-medium border border-coffee-200 hover:bg-coffee-100 transition-colors duration-300">
-                    Latte
-                  </span>
+                <!-- Content Section -->
+                <div class="relative z-10 text-center">
+                  <!-- Title with Gradient Text -->
+                  <h3 class="text-3xl font-bold mb-3 bg-gradient-to-r from-coffee-500 via-coffee-400 to-coffee-300 bg-clip-text text-transparent group-hover:from-coffee-400 group-hover:via-coffee-300 group-hover:to-coffee-200 transition-all duration-300">
+                    Hot Coffee
+                  </h3>
+                  
+                  <!-- Subtitle -->
+                  <p class="text-coffee-400 font-medium mb-6 text-sm uppercase tracking-wider">
+                    Premium Brewed Excellence
+                  </p>
+                  
+                  <!-- Description -->
+                  <p class="text-coffee-500 mb-8 leading-relaxed text-sm max-w-xs mx-auto">
+                    Rich, aromatic brews served at the perfect temperature for maximum flavor extraction
+                  </p>
+                  
+                  <!-- Interactive Menu Items -->
+                  <div class="grid grid-cols-3 gap-3 mb-8">
+                    <div class="group/item relative">
+                      <div class="bg-gradient-to-br from-coffee-100/90 to-coffee-200/80 backdrop-blur-sm rounded-xl p-3 border border-coffee-200/70 hover:from-coffee-200/90 hover:to-coffee-300/80 transition-all duration-300 group-hover/item:scale-105 shadow-sm">
+                        <div class="text-2xl mb-1">☕</div>
+                        <div class="text-xs font-semibold text-coffee-500">Espresso</div>
+                      </div>
+                    </div>
+                    <div class="group/item relative">
+                      <div class="bg-gradient-to-br from-coffee-100/90 to-coffee-200/80 backdrop-blur-sm rounded-xl p-3 border border-coffee-200/70 hover:from-coffee-200/90 hover:to-coffee-300/80 transition-all duration-300 group-hover/item:scale-105 shadow-sm">
+                        <div class="text-2xl mb-1">🥛</div>
+                        <div class="text-xs font-semibold text-coffee-500">Cappuccino</div>
+                      </div>
+                    </div>
+                    <div class="group/item relative">
+                      <div class="bg-gradient-to-br from-coffee-100/90 to-coffee-200/80 backdrop-blur-sm rounded-xl p-3 border border-coffee-200/70 hover:from-coffee-200/90 hover:to-coffee-300/80 transition-all duration-300 group-hover/item:scale-105 shadow-sm">
+                        <div class="text-2xl mb-1">☕</div>
+                        <div class="text-xs font-semibold text-coffee-500">Latte</div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- CTA Button with Unique Design -->
+                  <button class="relative w-full bg-gradient-to-r from-coffee-400 via-coffee-500 to-coffee-400 text-white py-4 px-6 rounded-2xl font-bold text-sm hover:from-coffee-500 hover:via-coffee-400 hover:to-coffee-500 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl group-hover:shadow-coffee-300/30 overflow-hidden">
+                    <span class="relative z-10 flex items-center justify-center gap-2">
+                      <span>Discover Menu</span>
+                      <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"/>
+                      </svg>
+                    </span>
+                    <!-- Button Glow Effect -->
+                    <div class="absolute inset-0 bg-gradient-to-r from-coffee-300/40 to-coffee-200/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </button>
                 </div>
+                
+                <!-- Bottom Accent Line -->
+                <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-coffee-300 via-coffee-400 to-coffee-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700"></div>
               </div>
               
               <!-- Cold Coffee -->
-              <div class="group text-center">
+              <div class="group relative bg-gradient-to-br from-coffee-100 via-coffee-50 to-coffee-200/40 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-3 border border-coffee-300/50 overflow-hidden">
+                <!-- Decorative Background Elements -->
+                <div class="absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl from-coffee-300/50 to-transparent rounded-full -translate-y-20 translate-x-20"></div>
+                <div class="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-coffee-400/40 to-transparent rounded-full translate-y-16 -translate-x-16"></div>
+                <div class="absolute top-1/2 left-1/2 w-20 h-20 bg-gradient-to-br from-coffee-200/60 to-transparent rounded-full -translate-x-10 -translate-y-10"></div>
+                
+                <!-- Main Icon with Glow Effect -->
                 <div class="relative mb-8">
-                  <div class="w-20 h-20 mx-auto bg-gradient-to-br from-blue-400 to-cyan-500 rounded-full flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-500">
-                    <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div class="w-24 h-24 mx-auto bg-gradient-to-br from-coffee-200 via-coffee-300 to-coffee-400 rounded-2xl flex items-center justify-center shadow-2xl group-hover:shadow-coffee-300/50 group-hover:scale-110 transition-all duration-500 relative">
+                    <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
                     </svg>
+                    <!-- Glow Effect -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-coffee-200/60 to-coffee-300/40 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
                   </div>
-                  <div class="absolute -top-2 -right-2 w-6 h-6 bg-blue-300 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                  
+                  <!-- Floating Elements -->
+                  <div class="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-br from-coffee-200 to-coffee-300 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 animate-pulse"></div>
+                  <div class="absolute -bottom-1 -left-1 w-4 h-4 bg-gradient-to-br from-coffee-100 to-coffee-200 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-700 animate-bounce"></div>
                 </div>
                 
-                <h3 class="text-2xl font-bold text-coffee-500 mb-4 group-hover:text-coffee-400 transition-colors duration-300">
-                  Cold Coffee
-                </h3>
-                <p class="text-coffee-400 mb-6 leading-relaxed text-sm max-w-xs mx-auto">
-                  Refreshing cold brews and iced specialties perfect for warm days and energy boosts
-                </p>
-                
-                <div class="flex flex-wrap justify-center gap-3">
-                  <span class="px-4 py-2 bg-blue-50 text-blue-600 rounded-full text-sm font-medium border border-blue-200 hover:bg-blue-100 transition-colors duration-300">
-                    Cold Brew
-                  </span>
-                  <span class="px-4 py-2 bg-blue-50 text-blue-600 rounded-full text-sm font-medium border border-blue-200 hover:bg-blue-100 transition-colors duration-300">
-                    Iced Latte
-                  </span>
-                  <span class="px-4 py-2 bg-blue-50 text-blue-600 rounded-full text-sm font-medium border border-blue-200 hover:bg-blue-100 transition-colors duration-300">
-                    Frappuccino
-                  </span>
-                </div>
-              </div>
-              
-              <!-- Takeaway -->
-              <div class="group text-center">
-                <div class="relative mb-8">
-                  <div class="w-20 h-20 mx-auto bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-500">
-                    <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                    </svg>
+                <!-- Content Section -->
+                <div class="relative z-10 text-center">
+                  <!-- Title with Gradient Text -->
+                  <h3 class="text-3xl font-bold mb-3 bg-gradient-to-r from-coffee-400 via-coffee-300 to-coffee-200 bg-clip-text text-transparent group-hover:from-coffee-300 group-hover:via-coffee-200 group-hover:to-coffee-100 transition-all duration-300">
+                    Cold Coffee
+                  </h3>
+                  
+                  <!-- Subtitle -->
+                  <p class="text-coffee-300 font-medium mb-6 text-sm uppercase tracking-wider">
+                    Refreshing Iced Excellence
+                  </p>
+                  
+                  <!-- Description -->
+                  <p class="text-coffee-400 mb-8 leading-relaxed text-sm max-w-xs mx-auto">
+                    Refreshing cold brews and iced specialties perfect for warm days and energy boosts
+                  </p>
+                  
+                  <!-- Interactive Menu Items -->
+                  <div class="grid grid-cols-3 gap-3 mb-8">
+                    <div class="group/item relative">
+                      <div class="bg-gradient-to-br from-coffee-100/90 to-coffee-200/80 backdrop-blur-sm rounded-xl p-3 border border-coffee-200/70 hover:from-coffee-200/90 hover:to-coffee-300/80 transition-all duration-300 group-hover/item:scale-105 shadow-sm">
+                        <div class="text-2xl mb-1">🧊</div>
+                        <div class="text-xs font-semibold text-coffee-400">Cold Brew</div>
+                      </div>
+                    </div>
+                    <div class="group/item relative">
+                      <div class="bg-gradient-to-br from-coffee-100/90 to-coffee-200/80 backdrop-blur-sm rounded-xl p-3 border border-coffee-200/70 hover:from-coffee-200/90 hover:to-coffee-300/80 transition-all duration-300 group-hover/item:scale-105 shadow-sm">
+                        <div class="text-2xl mb-1">🥛</div>
+                        <div class="text-xs font-semibold text-coffee-400">Iced Latte</div>
+                      </div>
+                    </div>
+                    <div class="group/item relative">
+                      <div class="bg-gradient-to-br from-coffee-100/90 to-coffee-200/80 backdrop-blur-sm rounded-xl p-3 border border-coffee-200/70 hover:from-coffee-200/90 hover:to-coffee-300/80 transition-all duration-300 group-hover/item:scale-105 shadow-sm">
+                        <div class="text-2xl mb-1">🍹</div>
+                        <div class="text-xs font-semibold text-coffee-400">Frappuccino</div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="absolute -top-2 -right-2 w-6 h-6 bg-green-300 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                  
+                  <!-- CTA Button with Unique Design -->
+                  <button class="relative w-full bg-gradient-to-r from-coffee-300 via-coffee-400 to-coffee-300 text-white py-4 px-6 rounded-2xl font-bold text-sm hover:from-coffee-400 hover:via-coffee-300 hover:to-coffee-400 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl group-hover:shadow-coffee-300/30 overflow-hidden">
+                    <span class="relative z-10 flex items-center justify-center gap-2">
+                      <span>Discover Menu</span>
+                      <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"/>
+                      </svg>
+                    </span>
+                    <!-- Button Glow Effect -->
+                    <div class="absolute inset-0 bg-gradient-to-r from-coffee-200/50 to-coffee-100/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </button>
                 </div>
                 
-                <h3 class="text-2xl font-bold text-coffee-500 mb-4 group-hover:text-coffee-400 transition-colors duration-300">
-                  Takeaway
-                </h3>
-                <p class="text-coffee-400 mb-6 leading-relaxed text-sm max-w-xs mx-auto">
-                  Perfect for busy mornings - grab your favorite coffee on the go with eco-friendly packaging
-                </p>
-                
-                <div class="flex flex-wrap justify-center gap-3">
-                  <span class="px-4 py-2 bg-green-50 text-green-600 rounded-full text-sm font-medium border border-green-200 hover:bg-green-100 transition-colors duration-300">
-                    Quick Service
-                  </span>
-                  <span class="px-4 py-2 bg-green-50 text-green-600 rounded-full text-sm font-medium border border-green-200 hover:bg-green-100 transition-colors duration-300">
-                    Eco Cups
-                  </span>
-                  <span class="px-4 py-2 bg-green-50 text-green-600 rounded-full text-sm font-medium border border-green-200 hover:bg-green-100 transition-colors duration-300">
-                    Mobile Order
-                  </span>
-                </div>
+                <!-- Bottom Accent Line -->
+                <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-coffee-200 via-coffee-300 to-coffee-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700"></div>
               </div>
               
               <!-- Desserts -->
-              <div class="group text-center">
+              <div class="group relative bg-gradient-to-br from-coffee-50 via-coffee-100 to-coffee-300/30 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-3 border border-coffee-400/50 overflow-hidden">
+                <!-- Decorative Background Elements -->
+                <div class="absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl from-coffee-400/50 to-transparent rounded-full -translate-y-20 translate-x-20"></div>
+                <div class="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-coffee-500/40 to-transparent rounded-full translate-y-16 -translate-x-16"></div>
+                <div class="absolute top-1/2 left-1/2 w-20 h-20 bg-gradient-to-br from-coffee-300/60 to-transparent rounded-full -translate-x-10 -translate-y-10"></div>
+                
+                <!-- Main Icon with Glow Effect -->
                 <div class="relative mb-8">
-                  <div class="w-20 h-20 mx-auto bg-gradient-to-br from-pink-400 to-rose-500 rounded-full flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-500">
-                    <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div class="w-24 h-24 mx-auto bg-gradient-to-br from-coffee-400 via-coffee-500 to-coffee-500 rounded-2xl flex items-center justify-center shadow-2xl group-hover:shadow-coffee-400/50 group-hover:scale-110 transition-all duration-500 relative">
+                    <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
                     </svg>
+                    <!-- Glow Effect -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-coffee-400/60 to-coffee-500/40 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
                   </div>
-                  <div class="absolute -top-2 -right-2 w-6 h-6 bg-pink-300 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                  
+                  <!-- Floating Elements -->
+                  <div class="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-br from-coffee-400 to-coffee-500 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 animate-pulse"></div>
+                  <div class="absolute -bottom-1 -left-1 w-4 h-4 bg-gradient-to-br from-coffee-300 to-coffee-400 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-700 animate-bounce"></div>
                 </div>
                 
-                <h3 class="text-2xl font-bold text-coffee-500 mb-4 group-hover:text-coffee-400 transition-colors duration-300">
-                  Desserts
-                </h3>
-                <p class="text-coffee-400 mb-6 leading-relaxed text-sm max-w-xs mx-auto">
-                  Artisanal pastries and sweet treats handcrafted to perfectly complement your coffee
-                </p>
-                
-                <div class="flex flex-wrap justify-center gap-3">
-                  <span class="px-4 py-2 bg-pink-50 text-pink-600 rounded-full text-sm font-medium border border-pink-200 hover:bg-pink-100 transition-colors duration-300">
-                    Croissants
-                  </span>
-                  <span class="px-4 py-2 bg-pink-50 text-pink-600 rounded-full text-sm font-medium border border-pink-200 hover:bg-pink-100 transition-colors duration-300">
-                    Cakes
-                  </span>
-                  <span class="px-4 py-2 bg-pink-50 text-pink-600 rounded-full text-sm font-medium border border-pink-200 hover:bg-pink-100 transition-colors duration-300">
-                    Cookies
-                  </span>
+                <!-- Content Section -->
+                <div class="relative z-10 text-center">
+                  <!-- Title with Gradient Text -->
+                  <h3 class="text-3xl font-bold mb-3 bg-gradient-to-r from-coffee-500 via-coffee-400 to-coffee-300 bg-clip-text text-transparent group-hover:from-coffee-400 group-hover:via-coffee-300 group-hover:to-coffee-200 transition-all duration-300">
+                    Desserts
+                  </h3>
+                  
+                  <!-- Subtitle -->
+                  <p class="text-coffee-400 font-medium mb-6 text-sm uppercase tracking-wider">
+                    Sweet Artisanal Treats
+                  </p>
+                  
+                  <!-- Description -->
+                  <p class="text-coffee-500 mb-8 leading-relaxed text-sm max-w-xs mx-auto">
+                    Artisanal pastries and sweet treats handcrafted to perfectly complement your coffee
+                  </p>
+                  
+                  <!-- Interactive Menu Items -->
+                  <div class="grid grid-cols-3 gap-3 mb-8">
+                    <div class="group/item relative">
+                      <div class="bg-gradient-to-br from-coffee-100/90 to-coffee-200/80 backdrop-blur-sm rounded-xl p-3 border border-coffee-200/70 hover:from-coffee-200/90 hover:to-coffee-300/80 transition-all duration-300 group-hover/item:scale-105 shadow-sm">
+                        <div class="text-2xl mb-1">🥐</div>
+                        <div class="text-xs font-semibold text-coffee-500">Croissants</div>
+                      </div>
+                    </div>
+                    <div class="group/item relative">
+                      <div class="bg-gradient-to-br from-coffee-100/90 to-coffee-200/80 backdrop-blur-sm rounded-xl p-3 border border-coffee-200/70 hover:from-coffee-200/90 hover:to-coffee-300/80 transition-all duration-300 group-hover/item:scale-105 shadow-sm">
+                        <div class="text-2xl mb-1">🍰</div>
+                        <div class="text-xs font-semibold text-coffee-500">Cakes</div>
+                      </div>
+                    </div>
+                    <div class="group/item relative">
+                      <div class="bg-gradient-to-br from-coffee-100/90 to-coffee-200/80 backdrop-blur-sm rounded-xl p-3 border border-coffee-200/70 hover:from-coffee-200/90 hover:to-coffee-300/80 transition-all duration-300 group-hover/item:scale-105 shadow-sm">
+                        <div class="text-2xl mb-1">🍪</div>
+                        <div class="text-xs font-semibold text-coffee-500">Cookies</div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- CTA Button with Unique Design -->
+                  <button class="relative w-full bg-gradient-to-r from-coffee-400 via-coffee-500 to-coffee-400 text-white py-4 px-6 rounded-2xl font-bold text-sm hover:from-coffee-500 hover:via-coffee-400 hover:to-coffee-500 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl group-hover:shadow-coffee-400/30 overflow-hidden">
+                    <span class="relative z-10 flex items-center justify-center gap-2">
+                      <span>Discover Menu</span>
+                      <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"/>
+                      </svg>
+                    </span>
+                    <!-- Button Glow Effect -->
+                    <div class="absolute inset-0 bg-gradient-to-r from-coffee-300/50 to-coffee-200/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </button>
                 </div>
+                
+                <!-- Bottom Accent Line -->
+                <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-coffee-300 via-coffee-400 to-coffee-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700"></div>
               </div>
             </div>
           </div>
