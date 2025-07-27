@@ -50,7 +50,7 @@
     @apply text-3xl md:text-4xl font-bold text-coffee-500 text-center mb-12;
   }
   
-  .nav-link {
+  .nav-link.dekstop {
     @apply text-coffee-500 hover:text-white transition-colors duration-300 font-medium;
   }
   
@@ -70,7 +70,7 @@
     @apply text-white;
   }
   
-  .navbar-scrolled .nav-link {
+  .navbar-scrolled .nav-link.dekstop {
     @apply text-white hover:text-coffee-200 font-semibold;
   }
   
