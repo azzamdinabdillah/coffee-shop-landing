@@ -31,8 +31,8 @@
             <!-- Desktop Menu Navigation -->
             <div class="hidden lg:flex items-center space-x-8">
               <a href="#home" class="nav-link dekstop text-white text-sm font-semibold">Home</a>
-              <a href="#menu" class="nav-link dekstop text-sm font-semibold">Menu</a>
-              <a href="#facility" class="nav-link dekstop text-sm font-semibold">Facility</a>
+              <a href="#coffee" class="nav-link dekstop text-sm font-semibold">Menu</a>
+              <a href="#location" class="nav-link dekstop text-sm font-semibold">Facility</a>
               <a href="#reviews" class="nav-link dekstop text-sm font-semibold">Reviews</a>
             </div>
             
@@ -42,9 +42,11 @@
                 <div class="font-semibold text-xs uppercase tracking-wider">Our Address</div>
                 <div class="text-sm font-semibold">123 Coffee Street</div>
               </div>
-              <button class="bg-coffee-300 text-coffee-500 px-6 py-2.5 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-md">
-                Visit Us
-              </button>
+              <a href="#location">
+                <button class="bg-coffee-300 text-coffee-500 px-6 py-2.5 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-md">
+                  Visit Us
+                </button>
+              </a>
             </div>
             
             <!-- Mobile Menu Button -->
@@ -61,8 +63,8 @@
           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div class="space-y-1">
               <a href="#home" class="block py-3 px-4 text-white rounded-lg nav-link text-sm font-medium">Home</a>
-              <a href="#menu" class="block py-3 px-4 text-white rounded-lg nav-link text-sm font-medium hover:bg-white/10">Menu</a>
-              <a href="#facility" class="block py-3 px-4 text-white rounded-lg nav-link text-sm font-medium hover:bg-white/10">Facility</a>
+              <a href="#coffee" class="block py-3 px-4 text-white rounded-lg nav-link text-sm font-medium hover:bg-white/10">Menu</a>
+              <a href="#location" class="block py-3 px-4 text-white rounded-lg nav-link text-sm font-medium hover:bg-white/10">Facility</a>
               <a href="#reviews" class="block py-3 px-4 text-white rounded-lg nav-link text-sm font-medium hover:bg-white/10">Reviews</a>
             </div>
             <div class="border-t border-white/20 mt-4 pt-4">
@@ -70,9 +72,11 @@
                 <div class="font-semibold text-xs uppercase tracking-wider">Our Address</div>
                 <div class="text-gray-200 text-sm">123 Coffee Street</div>
               </div>
-              <button class="w-full bg-white text-coffee-500 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300">
-                Visit Us
-              </button>
+              <a href="#location">
+                <button class="w-full bg-white text-coffee-500 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300">
+                  Visit Us
+                </button>
+              </a>
             </div>
           </div>
         </div>
@@ -116,15 +120,17 @@
             
             <!-- Call to Action Buttons -->
             <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-6 mb-16 lg:mb-10">
-              <button class="group w-full md:w-auto bg-gradient-to-r from-coffee-500 to-coffee-400 text-white px-10 py-4 rounded-xl font-semibold hover:from-coffee-600 hover:to-coffee-500 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-                <span class="flex items-center justify-center space-x-2">
-                  <span>Get Your Coffee</span>
-                  <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                  </svg>
-                </span>
-              </button>
-              <a href="#menu" class="w-full md:w-auto">
+              <a href="#coffee">
+                <button class="group w-full md:w-auto bg-gradient-to-r from-coffee-500 to-coffee-400 text-white px-10 py-4 rounded-xl font-semibold hover:from-coffee-600 hover:to-coffee-500 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                  <span class="flex items-center justify-center space-x-2">
+                    <span>Get Your Coffee</span>
+                    <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                  </span>
+                </button>
+              </a>
+              <a href="#coffee" class="w-full md:w-auto">
                 <button class="group border-2 w-full md:w-auto border-coffee-400 text-coffee-500 px-8 py-4 rounded-xl font-semibold hover:bg-coffee-400 hover:text-white transition-all duration-300 transform hover:scale-105">
                   <span class="flex items-center justify-center space-x-2">
                     <span>View Menu</span>
@@ -187,7 +193,7 @@
       
 
       <!-- Coffee Beans Promotion Section -->
-      <section class="py-24 bg-gradient-to-br from-gray-900 via-coffee-500 to-gray-800 relative overflow-hidden">
+      <section id="about" class="py-24 bg-gradient-to-br from-gray-900 via-coffee-500 to-gray-800 relative overflow-hidden">
         <!-- Background Pattern -->
         <div class="absolute inset-0 bg-coffee-pattern-2 opacity-5"></div>
         
@@ -242,7 +248,7 @@
               
               <!-- CTA Buttons -->
               <div class="flex flex-col sm:flex-row gap-4">
-                <a href="#menu">
+                <a href="#coffee">
                   <button class="bg-coffee-300 text-coffee-500 font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl hover:shadow-coffee-400/30 flex items-center justify-center space-x-2 text-lg">
                     <span>View Menu</span>
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -429,14 +435,16 @@
                       </div>
                     </div>
                     
-                    <button class="bg-coffee-400 text-white px-6 py-3 rounded-xl font-bold hover:bg-coffee-500 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 flex-grow lg:flex-grow-0 ">
-                      <span class="flex items-center gap-2 justify-center">
-                        <span>Order Now</span>
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"/>
-                        </svg>
-                      </span>
-                    </button>
+                    <a href="#coffee">
+                      <button class="bg-coffee-400 text-white px-6 py-3 rounded-xl font-bold hover:bg-coffee-500 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 flex-grow lg:flex-grow-0 ">
+                        <span class="flex items-center gap-2 justify-center">
+                          <span>Order Now</span>
+                          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"/>
+                          </svg>
+                        </span>
+                      </button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -520,14 +528,16 @@
                       </div>
                     </div>
                     
-                    <button class="bg-coffee-400 text-white px-6 py-3 rounded-xl font-bold hover:bg-coffee-500 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 flex-grow lg:flex-grow-0 ">
-                      <span class="flex items-center gap-2 justify-center">
-                        <span>Order Now</span>
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"/>
-                        </svg>
-                      </span>
-                    </button>
+                    <a href="#coffee">
+                      <button class="bg-coffee-400 text-white px-6 py-3 rounded-xl font-bold hover:bg-coffee-500 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 flex-grow lg:flex-grow-0 ">
+                        <span class="flex items-center gap-2 justify-center">
+                          <span>Order Now</span>
+                          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"/>
+                          </svg>
+                        </span>
+                      </button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -618,14 +628,16 @@
                       </div>
                     </div>
                     
-                    <button class="bg-coffee-400 text-white px-6 py-3 rounded-xl font-bold hover:bg-coffee-500 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 flex-grow lg:flex-grow-0">
-                      <span class="flex items-center gap-2 justify-center">
-                        <span>Order Now</span>
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"/>
-                        </svg>
-                      </span>
-                    </button>
+                    <a href="#coffee">
+                      <button class="bg-coffee-400 text-white px-6 py-3 rounded-xl font-bold hover:bg-coffee-500 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 flex-grow lg:flex-grow-0">
+                        <span class="flex items-center gap-2 justify-center">
+                          <span>Order Now</span>
+                          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"/>
+                          </svg>
+                        </span>
+                      </button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -740,14 +752,16 @@
                       </div>
                     </div>
                     
-                    <button class="bg-coffee-200 text-coffee-500 px-6 py-3 rounded-xl font-bold hover:bg-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 flex-grow lg:flex-grow-0">
-                      <span class="flex items-center gap-2 justify-center">
-                        <span>Order Now</span>
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"/>
-                        </svg>
-                      </span>
-                    </button>
+                    <a href="#dessert">
+                      <button class="bg-coffee-200 text-coffee-500 px-6 py-3 rounded-xl font-bold hover:bg-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 flex-grow lg:flex-grow-0">
+                        <span class="flex items-center gap-2 justify-center">
+                          <span>Order Now</span>
+                          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"/>
+                          </svg>
+                        </span>
+                      </button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -831,14 +845,16 @@
                       </div>
                     </div>
                     
-                    <button class="bg-coffee-200 text-coffee-500 px-6 py-3 rounded-xl font-bold hover:bg-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 flex-grow lg:flex-grow-0">
-                      <span class="flex items-center gap-2 justify-center">
-                        <span>Order Now</span>
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"/>
-                        </svg>
-                      </span>
-                    </button>
+                    <a href="#dessert">
+                      <button class="bg-coffee-200 text-coffee-500 px-6 py-3 rounded-xl font-bold hover:bg-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 flex-grow lg:flex-grow-0">
+                        <span class="flex items-center gap-2 justify-center">
+                          <span>Order Now</span>
+                          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"/>
+                          </svg>
+                        </span>
+                      </button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -922,14 +938,16 @@
                       </div>
                     </div>
                     
-                    <button class="bg-coffee-200 text-coffee-500 px-6 py-3 rounded-xl font-bold hover:bg-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 flex-grow lg:flex-grow-0">
-                      <span class="flex items-center gap-2 justify-center">
-                        <span>Order Now</span>
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"/>
-                        </svg>
-                      </span>
-                    </button>
+                    <a href="#dessert">
+                      <button class="bg-coffee-200 text-coffee-500 px-6 py-3 rounded-xl font-bold hover:bg-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 flex-grow lg:flex-grow-0">
+                        <span class="flex items-center gap-2 justify-center">
+                          <span>Order Now</span>
+                          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"/>
+                          </svg>
+                        </span>
+                      </button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -939,7 +957,7 @@
       </section>
 
       <!-- Customer Testimonials Section -->
-      <section class="py-24 bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50 relative overflow-hidden">
+      <section id="reviews" class="py-24 bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50 relative overflow-hidden">
         <!-- Background Pattern -->
         <!-- <div class="absolute inset-0 bg-coffee-pattern-2 opacity-8"></div> -->
         
@@ -1285,7 +1303,7 @@
       </section>
 
       <!-- Location & Map Section -->
-      <section class="relative py-24 bg-coffee-500 overflow-hidden">
+      <section id="location" class="relative py-24 bg-coffee-500 overflow-hidden">
         <div class="absolute inset-0 bg-coffee-400 opacity-20"></div>
         <div class="max-w-6xl mx-auto px-4 relative z-10">
           <!-- Header Section -->
@@ -1436,8 +1454,10 @@
                   <div class="flex space-x-4 mb-8">
                     <a href="#" class="group relative">
                       <div class="w-12 h-12 bg-coffee-200 hover:bg-coffee-300 rounded-xl flex items-center justify-center transition-all duration-300 transform group-hover:scale-110 group-hover:rotate-3 shadow-lg">
-                        <svg class="w-6 h-6 text-coffee-500" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                        <svg class="w-6 h-6 text-coffee-500" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                          <rect x="2.5" y="2.5" width="19" height="19" rx="5" stroke="currentColor" fill="none"/>
+                          <circle cx="12" cy="12" r="5" stroke="currentColor" fill="none"/>
+                          <circle cx="17" cy="7" r="1.3" fill="currentColor" stroke="currentColor" stroke-width="1.2"/>
                         </svg>
                       </div>
                     </a>
@@ -1506,9 +1526,9 @@
                         </a>
                       </li>
                       <li>
-                        <a href="#bakery" class="group flex items-center text-coffee-400 hover:text-coffee-500 transition-all duration-300">
+                        <a href="#dessert" class="group flex items-center text-coffee-400 hover:text-coffee-500 transition-all duration-300">
                           <span class="w-2 h-2 bg-coffee-300 rounded-full mr-3 group-hover:scale-150 transition-transform"></span>
-                          <span class="group-hover:translate-x-1 transition-transform">Bakery</span>
+                          <span class="group-hover:translate-x-1 transition-transform">Dessert</span>
                         </a>
                       </li>
                     </ul>
@@ -1522,7 +1542,7 @@
                     </h4>
                     <ul class="space-y-4">
                       <li>
-                        <a href="#" class="group flex items-center text-coffee-400 hover:text-coffee-500 transition-all duration-300">
+                        <a href="#about" class="group flex items-center text-coffee-400 hover:text-coffee-500 transition-all duration-300">
                           <span class="w-2 h-2 bg-coffee-300 rounded-full mr-3 group-hover:scale-150 transition-transform"></span>
                           <span class="group-hover:translate-x-1 transition-transform">About Us</span>
                         </a>
@@ -1540,7 +1560,7 @@
                         </a>
                       </li>
                       <li>
-                        <a href="#" class="group flex items-center text-coffee-400 hover:text-coffee-500 transition-all duration-300">
+                        <a href="#location" class="group flex items-center text-coffee-400 hover:text-coffee-500 transition-all duration-300">
                           <span class="w-2 h-2 bg-coffee-300 rounded-full mr-3 group-hover:scale-150 transition-transform"></span>
                           <span class="group-hover:translate-x-1 transition-transform">Contact</span>
                         </a>
