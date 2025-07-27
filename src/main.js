@@ -1,4 +1,5 @@
 import { CountUp } from 'countup.js';
+import Swiper from 'swiper/bundle';
 
 // Navbar scroll effect
 document.addEventListener('DOMContentLoaded', function() {
@@ -32,4 +33,22 @@ document.addEventListener('DOMContentLoaded', function() {
     new CountUp('private-rooms-counter', 14, { enableScrollSpy: true });
     new CountUp('event-spaces-counter', 10, { enableScrollSpy: true });
     new CountUp('creative-studios-counter', 9, { enableScrollSpy: true });
+
+    new Swiper('.testimonial-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+          delay: 2000,
+          disableOnInteraction: false,
+        },
+        navigation: {
+          nextEl: '.testimonial-next-btn',
+          prevEl: '.testimonial-prev-btn',
+        },
+        effect: 'fade',
+        fadeEffect: {
+          crossFade: true
+        }
+    });
 }); 

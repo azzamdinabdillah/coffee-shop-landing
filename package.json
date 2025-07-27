@@ -14,6 +14,7 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.1.11",
     "countup.js": "^2.9.0",
+    "swiper": "^11.2.10",
     "tailwindcss": "^4.1.11"
   }
 }
