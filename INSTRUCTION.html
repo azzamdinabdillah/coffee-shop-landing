@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Coffee Shop Website Setup Guide - For Beginners</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: #1a202c;
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        li{
+            margin-left: 1rem;
+        }
+
+        .table-of-contents li{
+            margin-left: 0;
+        }
+
+        .header {
+            background: #8B4513;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 24px;
+            margin-bottom: 40px;
+            box-shadow: 0 20px 40px rgba(139, 69, 19, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="1.5" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="80" r="1" fill="rgba(255,255,255,0.1)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            font-weight: 800;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header p {
+            font-size: 1.4rem;
+            opacity: 0.95;
+            position: relative;
+            z-index: 1;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .section {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(139, 69, 19, 0.1);
+            position: relative;
+        }
+
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #8B4513, #A0522D, #CD853F);
+            border-radius: 20px 20px 0 0;
+        }
+
+        .section h2 {
+            color: #8B4513;
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-weight: 700;
+        }
+
+        .section h3 {
+            color: #A0522D;
+            font-size: 1.6rem;
+            margin: 30px 0 20px 0;
+            border-bottom: 3px solid #D2B48C;
+            padding-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .step {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 16px;
+            padding: 25px;
+            margin: 20px 0;
+            border-left: 5px solid #8B4513;
+            position: relative;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .step:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .step-number {
+            background: linear-gradient(135deg, #8B4513, #A0522D);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.2rem;
+            position: absolute;
+            top: -20px;
+            left: 25px;
+            box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
+        }
+
+        .step h4 {
+            color: #8B4513;
+            margin-bottom: 15px;
+            margin-left: 50px;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .code-block {
+            background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+            color: #e2e8f0;
+            padding: 20px;
+            border-radius: 12px;
+            font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+            margin: 15px 0;
+            overflow-x: auto;
+            border-left: 4px solid #8B4513;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .warning {
+            background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+            border: 2px solid #f39c12;
+            color: #856404;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border-left: 5px solid #f39c12;
+            box-shadow: 0 4px 15px rgba(243, 156, 18, 0.1);
+        }
+
+        .success {
+            background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+            border: 2px solid #28a745;
+            color: #155724;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border-left: 5px solid #28a745;
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.1);
+        }
+
+        .info {
+            background: linear-gradient(135deg, #d1ecf1 0%, #bee5eb 100%);
+            border: 2px solid #17a2b8;
+            color: #0c5460;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border-left: 5px solid #17a2b8;
+            box-shadow: 0 4px 15px rgba(23, 162, 184, 0.1);
+        }
+
+        .file-structure {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border: 2px solid #dee2e6;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+
+        .file-structure .folder {
+            color: #8B4513;
+            font-weight: bold;
+        }
+
+        .file-structure .file {
+            color: #2c3e50;
+        }
+
+        .modification-section {
+            background: linear-gradient(135deg, #fff8dc 0%, #faf0e6 100%);
+            border: 2px solid #D2B48C;
+            border-radius: 16px;
+            padding: 25px;
+            margin: 25px 0;
+            box-shadow: 0 4px 15px rgba(210, 180, 140, 0.1);
+        }
+
+        .icon {
+            font-size: 2rem;
+            margin-right: 15px;
+        }
+
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+
+        .checklist li {
+            padding: 12px 0;
+            padding-left: 40px;
+            position: relative;
+            font-size: 1.1rem;
+            border-bottom: 1px solid rgba(139, 69, 19, 0.1);
+        }
+
+        .checklist li:last-child {
+            border-bottom: none;
+        }
+
+        .checklist li:before {
+            content: "✓";
+            color: #28a745;
+            font-weight: bold;
+            font-size: 1.2rem;
+            position: absolute;
+            left: 0;
+            top: 10px;
+        }
+
+        .troubleshooting {
+            background: linear-gradient(135deg, #fff5f5 0%, #fed7d7 100%);
+            border: 2px solid #f56565;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+            box-shadow: 0 4px 15px rgba(245, 101, 101, 0.1);
+        }
+
+        .troubleshooting h4 {
+            color: #c53030;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            margin-top: 50px;
+            box-shadow: 0 15px 35px rgba(139, 69, 19, 0.3);
+        }
+
+        .contact-info h3 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .contact-info p {
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, #fef5e7 0%, #faf0e6 100%);
+            border: 2px solid #D2B48C;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(210, 180, 140, 0.1);
+        }
+
+        .highlight h4 {
+            color: #8B4513;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .table-of-contents {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .table-of-contents h2 {
+            color: #8B4513;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .table-of-contents ol {
+            list-style: none;
+            counter-reset: item;
+            padding: 0;
+        }
+
+        .table-of-contents li {
+            counter-increment: item;
+            padding: 12px 0;
+            padding-left: 50px;
+            position: relative;
+            font-size: 1.1rem;
+            border-bottom: 1px solid rgba(139, 69, 19, 0.1);
+        }
+
+        .table-of-contents li:last-child {
+            border-bottom: none;
+        }
+
+        .table-of-contents li:before {
+            content: counter(item);
+            color: #8B4513;
+            font-weight: bold;
+            font-size: 1.2rem;
+            position: absolute;
+            left: 0;
+            top: 10px;
+            background: #D2B48C;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section {
+                padding: 25px;
+            }
+
+            .header {
+                padding: 40px 0;
+            }
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 30px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .footer p {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .footer .highlight-text {
+            color: #8B4513;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>☕ Complete Coffee Shop Website Setup Guide</h1>
+            <p>Comprehensive Guide for Beginners - Setup, Installation, and Website Customization</p>
+        </div>
+
+        <!-- Table of Contents -->
+        <div class="table-of-contents">
+            <h2>📋 Table of Contents</h2>
+            <ol>
+                <li>Initial Setup and Installation</li>
+                <li>Website File Structure</li>
+                <li>Running the Website</li>
+                <li>Content Modification</li>
+                <li>Design Customization</li>
+                <li>Uploading to Hosting</li>
+                <li>Troubleshooting Guide</li>
+                <li>Support Contact</li>
+            </ol>
+        </div>
+
+        <!-- Initial Setup -->
+        <div class="section">
+            <h2><span class="icon">🚀</span>Initial Setup and Installation</h2>
+            
+            <div class="step">
+                <div class="step-number">1</div>
+                <h4>Download Website Files</h4>
+                <p>Ensure you have received the website files in ZIP format. Extract the files to an easily accessible folder.</p>
+                <div class="info">
+                    <strong>💡 Pro Tip:</strong> Create a new folder named "coffeeo-landing" to store all files.
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <h4>Install Node.js</h4>
+                <p>This website uses Node.js. Download and install Node.js from the official website:</p>
+                <div class="code-block">
+                    https://nodejs.org/
+                </div>
+                <p>Choose the LTS (Long Term Support) version for stability.</p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <h4>Install Dependencies</h4>
+                <p>Open Command Prompt/Terminal in the website folder, then run:</p>
+                <div class="code-block">
+                    npm install
+                </div>
+                <p>This process will install all required libraries and dependencies.</p>
+            </div>
+
+            <div class="warning">
+                <strong>⚠️ Important:</strong> Ensure you have an internet connection when running the npm install command.
+            </div>
+        </div>
+
+        <!-- File Structure -->
+        <div class="section">
+            <h2><span class="icon">📁</span>Website File Structure</h2>
+            
+            <p>Below is the file structure of the website you received:</p>
+            
+            <div class="file-structure">
+                <div class="folder">coffeeo-landing-landing/</div>
+                <div class="file">├── index.html (Main website file)</div>
+                <div class="file">├── package.json (Project configuration)</div>
+                <div class="file">├── vite.config.ts (Build tool configuration)</div>
+                <div class="folder">├── src/</div>
+                <div class="file">│   ├── main.js (Main JavaScript file)</div>
+                <div class="file">│   └── style.css (CSS styling file)</div>
+                <div class="folder">├── public/</div>
+                <div class="folder">│   └── assets/</div>
+                <div class="folder">│       └── images/</div>
+                <div class="file">│           ├── coffee-pattern.png</div>
+                <div class="file">│           └── coffee-pattern-2.png</div>
+            </div>
+
+            <div class="info">
+                <strong>📝 File Descriptions:</strong>
+                <ul>
+                    <li><strong>index.html:</strong> Main file containing the website structure</li>
+                    <li><strong>src/style.css:</strong> File containing all website styling</li>
+                    <li><strong>src/main.js:</strong> JavaScript file for interactivity</li>
+                    <li><strong>public/assets/images/:</strong> Folder for storing images</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Running Website -->
+        <div class="section">
+            <h2><span class="icon">▶️</span>Running the Website</h2>
+            
+            <div class="step">
+                <div class="step-number">1</div>
+                <h4>Development Mode</h4>
+                <p>To view the website on your computer, run:</p>
+                <div class="code-block">
+                    npm run dev
+                </div>
+                <p>The website will automatically open in your browser at: <strong>http://localhost:5173</strong></p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <h4>Production Mode</h4>
+                <p>To create files ready for hosting upload:</p>
+                <div class="code-block">
+                    npm run build
+                </div>
+                <p>Built files will be stored in the <strong>dist/</strong> folder</p>
+            </div>
+
+            <div class="success">
+                <strong>✅ Success!</strong> If the website runs properly, you will see a complete coffee shop page with menu, testimonials, and location information.
+            </div>
+        </div>
+
+        <!-- Content Modification -->
+        <div class="section">
+            <h2><span class="icon">✏️</span>Content Modification</h2>
+            
+            <div class="modification-section">
+                <h3>1. Changing Coffee Shop Information</h3>
+                <p>Open the <strong>index.html</strong> file and find the section you want to modify:</p>
+                
+                <h4>Changing Coffee Shop Name:</h4>
+                <div class="code-block">
+                    &lt;div class="text-2xl lg:text-3xl font-bold text-white font-serif"&gt;Coffeeo&lt;/div&gt;
+                </div>
+                <p>Replace "Coffeeo" with your coffee shop name.</p>
+
+                <h4>Changing Address:</h4>
+                <div class="code-block">
+                    &lt;div class="text-sm font-semibold"&gt;123 Coffee Street&lt;/div&gt;
+                </div>
+                <p>Replace with your coffee shop address.</p>
+
+                <h4>Changing Phone Number:</h4>
+                <div class="code-block">
+                    &lt;div class="flex items-center gap-2"&gt;&lt;span class="text-coffee-100"&gt;📞&lt;/span&gt;&lt;span&gt;(021) 1234-5678&lt;/span&gt;&lt;/div&gt;
+                </div>
+                <p>Replace with the correct phone number.</p>
+            </div>
+
+            <div class="modification-section">
+                <h3>2. Modifying Coffee Menu</h3>
+                <p>Find the "Coffee Products Section" and modify:</p>
+                
+                <h4>Menu Name:</h4>
+                <div class="code-block">
+                    &lt;h3 class="text-2xl font-bold text-coffee-500 font-serif mb-1"&gt;Lungo Coffee&lt;/h3&gt;
+                </div>
+
+                <h4>Menu Price:</h4>
+                <div class="code-block">
+                    &lt;div class="text-2xl font-bold text-coffee-400"&gt;$19&lt;/div&gt;
+                </div>
+
+                <h4>Menu Description:</h4>
+                <div class="code-block">
+                    &lt;p class="text-gray-600 text-sm leading-relaxed mb-4"&gt;Rich, full-bodied espresso...&lt;/p&gt;
+                </div>
+            </div>
+
+            <div class="modification-section">
+                <h3>3. Replacing Images</h3>
+                <p>To replace images:</p>
+                <ol>
+                    <li>Save new images in the <strong>public/assets/images/</strong> folder</li>
+                    <li>Update image paths in the <strong>index.html</strong> file</li>
+                    <li>Supported formats: JPG, PNG, WebP</li>
+                </ol>
+                
+                <div class="code-block">
+                    src="public/assets/images/your-image-name.jpg"
+                </div>
+            </div>
+
+            <div class="warning">
+                <strong>⚠️ Pro Tips:</strong> Always backup original files before making changes. Use Ctrl+Z to undo if mistakes occur.
+            </div>
+        </div>
+
+        <!-- Design Customization -->
+        <div class="section">
+            <h2><span class="icon">🎨</span>Design Customization</h2>
+            
+            <div class="modification-section">
+                <h3>1. Changing Colors</h3>
+                <p>Open the <strong>src/style.css</strong> file and find the color section:</p>
+                
+                <h4>Main Theme Colors (Coffee Brown):</h4>
+                <div class="code-block">
+                    --coffee-50: #faf8f6; <br>
+                    --coffee-100: #f5f1ed; <br>
+                    --coffee-200: #e8dcc8; <br>
+                    --coffee-300: #d4b895; <br>
+                    --coffee-400: #c19a6b; <br>
+                    --coffee-500: #8B4513;
+                </div>
+                <p>Change hex color values according to your preferences.</p>
+            </div>
+
+            <div class="modification-section">
+                <h3>2. Changing Fonts</h3>
+                <p>To change fonts, find the Google Fonts section in <strong>index.html</strong>:</p>
+                <div class="code-block">
+                    &lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet"&gt;
+                </div>
+                <p>Replace with your preferred Google Fonts.</p>
+            </div>
+
+            <div class="modification-section">
+                <h3>3. Adjusting Text Sizes</h3>
+                <p>To change main heading size:</p>
+                <div class="code-block">
+                    &lt;h1 class="text-[38px] md:text-6xl lg:text-7xl xl:text-[80px] font-bold"&gt;
+                </div>
+                <p>Change values like "text-6xl" to "text-5xl" for smaller size.</p>
+            </div>
+        </div>
+
+        <!-- Upload to Hosting -->
+        <div class="section">
+            <h2><span class="icon">🌐</span>Uploading to Hosting</h2>
+            
+            <div class="step">
+                <div class="step-number">1</div>
+                <h4>Build Website</h4>
+                <p>Run the build command to create files ready for upload:</p>
+                <div class="code-block">
+                    npm run build
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <h4>Upload Files</h4>
+                <p>Upload all files from the <strong>dist/</strong> folder to your hosting using:</p>
+                <ul>
+                    <li>File Manager in cPanel</li>
+                    <li>FTP Client (FileZilla, WinSCP)</li>
+                    <li>Git (for hosting that supports it)</li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <h4>Domain Configuration</h4>
+                <p>Ensure your domain points to the correct folder on your hosting.</p>
+            </div>
+
+            <div class="info">
+                <strong>📋 Recommended Hosting Providers:</strong>
+                <ul>
+                    <li>Netlify (Free tier available)</li>
+                    <li>Vercel (Free tier available)</li>
+                    <li>GitHub Pages (Free)</li>
+                    <li>Hostinger</li>
+                    <li>Niagahoster</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Troubleshooting -->
+        <div class="section">
+            <h2><span class="icon">🔧</span>Troubleshooting Guide</h2>
+            
+            <div class="troubleshooting">
+                <h4>❌ Error: "npm command not found"</h4>
+                <p><strong>Solution:</strong> Install Node.js first from nodejs.org</p>
+            </div>
+
+            <div class="troubleshooting">
+                <h4>❌ Error: "Port 5173 is already in use"</h4>
+                <p><strong>Solution:</strong> Close other applications using that port, or use a different port by adding --port 3000</p>
+            </div>
+
+            <div class="troubleshooting">
+                <h4>❌ Website doesn't appear in browser</h4>
+                <p><strong>Solution:</strong> Ensure server is running correctly, check console for error messages</p>
+            </div>
+
+            <div class="troubleshooting">
+                <h4>❌ Images don't appear</h4>
+                <p><strong>Solution:</strong> Check image paths, ensure files exist in correct folders</p>
+            </div>
+
+            <div class="troubleshooting">
+                <h4>❌ Changes not visible</h4>
+                <p><strong>Solution:</strong> Refresh browser (Ctrl+F5), or restart development server</p>
+            </div>
+
+            <div class="info">
+                <strong>💡 Debugging Tips:</strong>
+                <ul>
+                    <li>Use F12 in browser to view errors in Console</li>
+                    <li>Check Network tab for file loading issues</li>
+                    <li>Ensure all files are saved properly</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Support Contact -->
+        <div class="contact-info">
+            <h3>📞 Need Help?</h3>
+            <p>If you experience difficulties with setup or website modification, don't hesitate to contact us:</p>
+            <p><strong>Email:</strong> support@coffeeshop.com</p>
+            <p><strong>WhatsApp:</strong> +62 8953-5144-8889</p>
+            <p><strong>Business Hours:</strong> Monday - Friday, 09:00 - 17:00 WIB</p>
+            <p><strong>Response Time:</strong> Maximum 24 hours</p>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p><strong>© 2025 Coffee Shop Website Guide</strong></p>
+            <p>This guide is specifically created for beginners who want to manage their own coffee shop website.</p>
+            <p class="highlight-text" style="margin-top: 20px; font-size: 1rem;">
+                🚀 Good luck! May your coffee shop website be successful! ☕
+            </p>
+        </div>
+    </div>
+</body>
+</html> 
