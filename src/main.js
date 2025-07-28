@@ -1,8 +1,18 @@
 import { CountUp } from 'countup.js';
 import Swiper from 'swiper/bundle';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 // Navbar scroll effect
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize AOS
+    AOS.init({
+        duration: 700,
+        easing: 'ease-in-out',
+        once: true,
+        offset: 100
+    });
+
     const navbar = document.getElementById('navbar');
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
